@@ -1,0 +1,25 @@
+.home {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.home h1 {
+  font-size: 45px;
+}
+
+.home p {
+  font-size: 20px;
+}
+
+.home button {
+  padding: 12px 25px;
+  border: none;
+  background: black;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
