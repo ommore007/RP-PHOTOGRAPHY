@@ -1,3 +1,4 @@
+import "../styles/Contact.css";
 function Contact() {
   return (
     <section className="contact" id="contact">
@@ -8,14 +9,25 @@ function Contact() {
 
       <p>👤 Rajesh Pawar</p>
 
-      <a
-        className="whatsapp-btn"
-        href="https://wa.me/919579834649"
-        target="_blank"
-        rel="noreferrer"
-      >
-        💬 Book Your Shoot
-      </a>
+      <div className="contact-buttons">
+
+        <a
+          className="whatsapp-btn"
+          href="https://wa.me/919579834649"
+          target="_blank"
+          rel="noreferrer"
+        >
+          💬 WhatsApp Book Now
+        </a>
+
+        <a
+          className="call-btn"
+          href="tel:+919579834649"
+        >
+          📞 Call Now
+        </a>
+
+      </div>
 
       <p>📧 rpphotography51@gmail.com</p>
 
