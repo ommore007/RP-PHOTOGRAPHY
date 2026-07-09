@@ -1,6 +1,5 @@
 import { useState } from "react";
-import galleryData from "../data/galleryData";
-
+import galleryData from "../data/gallerydata";
 function Gallery() {
   const [category, setCategory] = useState("");
 
