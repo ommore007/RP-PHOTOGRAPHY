@@ -1,18 +1,21 @@
 import { useState } from "react";
-import galleryData from "../data/gallerydata";function Gallery() {
-  const [category, setCategory] = useState("");
+import galleryData from "../data/gallerydata";
 
-  const categories = ["Wedding", "Prewedding", "Party"];
+function Gallery() {
+  const [category, setCategory] = useState("All");
+
+  const categories = ["All", "Wedding", "Prewedding", "Party"];
 
   const filteredPhotos =
-    category === ""
-      ? []
+    category === "All"
+      ? galleryData
       : galleryData.filter(
           (photo) => photo.category === category
         );
 
   return (
-    <div>
+    <section id="gallery">
+
       <div className="buttons">
         {categories.map((item) => (
           <button
@@ -27,11 +30,15 @@ import galleryData from "../data/gallerydata";function Gallery() {
       <div className="gallery">
         {filteredPhotos.map((photo) => (
           <div className="card" key={photo.id}>
-            <img src={photo.image} alt={photo.category} />
+            <img
+              src={photo.image}
+              alt={photo.category}
+            />
           </div>
         ))}
       </div>
-    </div>
+
+    </section>
   );
 }
 
