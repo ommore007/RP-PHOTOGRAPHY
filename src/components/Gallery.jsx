@@ -3,6 +3,7 @@ import galleryData from "../data/gallerydata";
 
 function Gallery() {
   const [category, setCategory] = useState("All");
+  const [selectedImage, setSelectedImage] = useState(null);
 
   const categories = ["All", "Wedding", "Prewedding", "Party"];
 
@@ -33,10 +34,21 @@ function Gallery() {
             <img
               src={photo.image}
               alt={photo.category}
+              onClick={() => setSelectedImage(photo.image)}
             />
           </div>
         ))}
       </div>
+
+
+      {selectedImage && (
+        <div
+          className="lightbox"
+          onClick={() => setSelectedImage(null)}
+        >
+          <img src={selectedImage} alt="Preview" />
+        </div>
+      )}
 
     </section>
   );
